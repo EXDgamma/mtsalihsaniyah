@@ -1,0 +1,47 @@
+CARA MENGELOLA WEBSITE MTs AL-IHSANIYAH SARANG BURUNG
+=====================================================
+
+ISI FOLDER
+- index.html        : halaman website (tampilan dan teks tetap)
+- data/berita.js    : daftar BERITA & PENGUMUMAN (paling sering diubah)
+- img/              : semua gambar (logo, foto)
+
+MENAMBAH BERITA / PENGUMUMAN
+1. Buka data/berita.js dengan Notepad / Notepad++ / VS Code.
+2. Salin satu blok mulai dari {  sampai  },  lalu tempel di bawah baris "window.BERITA = [".
+3. Ubah tanggal (format 2027-01-04), kategori (Pengumuman / Berita / Prestasi), judul, dan isi.
+4. Jika ada foto: simpan foto di folder img/ (sebaiknya lebar maksimal 1200 px), lalu tulis
+   foto: "img/nama-foto.jpg". Jika tidak ada foto, tulis foto: "".
+5. Pastikan setiap blok diakhiri tanda koma, dan teks berada di dalam tanda kutip "...".
+6. Simpan, lalu unggah ulang folder ke hosting (lihat di bawah).
+
+MENGUBAH TEKS LAIN (kontak, SPMB, guru)
+- Buka index.html, cari teks yang ingin diubah (Ctrl+F), ganti, simpan.
+- Daftar guru dan struktur organisasi ada di bagian bawah index.html (const GURU dan const STRUKTUR).
+
+MENERBITKAN GRATIS DI NETLIFY
+1. Buka https://app.netlify.com/drop dan masuk/daftar (gratis).
+2. Seret (drag & drop) SELURUH folder website ini ke halaman tersebut.
+3. Netlify memberi alamat seperti https://nama-acak.netlify.app ; ganti nama situs di
+   Site configuration > Change site name, mis. mtsalihsaniyah.
+4. Untuk memperbarui: buka situs di Netlify > Deploys > seret folder terbaru ke kotak unggah.
+
+Catatan privasi: jangan mencantumkan NIK, NIP, tanggal lahir, alamat rumah, atau nomor HP pribadi
+guru/murid. Unggah foto murid hanya dengan izin.
+
+
+=== PEMBARUAN v5 (template Academy) ===
+Struktur folder sekarang:
+  index.html            halaman utama
+  css/style.css         gaya dasar template (jangan diubah)
+  css/madrasah.css      warna hijau-emas dan komponen madrasah
+  js/main.js            interaksi template (menu, animasi)
+  js/madrasah.js        DATA GURU dan STRUKTUR ORGANISASI (ubah di sini)
+  data/berita.js        BERITA/PENGUMUMAN (cara mengubah tetap sama)
+  img/                  foto; foto guru di img/guru/nama.jpg (rasio 3:4)
+
+Menambah foto guru yang belum ada:
+  1. Simpan foto ke img/guru/ dengan nama huruf kecil, mis. hamdi.jpg
+  2. Buka js/madrasah.js, cari baris guru tersebut, isi kolom terakhir
+     dengan nama file tanpa .jpg, mis. "hamdi"
+  3. Unggah ulang seluruh folder ke Netlify (drag & drop).
